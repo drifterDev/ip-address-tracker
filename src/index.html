@@ -27,14 +27,14 @@ Para más información, consulta el archivo LICENSE en la raíz del repositorio.
     <div class="container">
       <!-- fondo cabecera -->
       <div
-        class="flex flex-col items-center gap-5 pt-8 w-full h-52 md:h-48 bg-[url('../images/pattern-bg-mobile.png')] bg-no-repeat bg-center bg-cover md:bg-[url('../images/pattern-bg-desktop.png')]"
+        class="flex flex-col items-center gap-5 pt-8 w-full h-52 lg:h-48 bg-[url('../images/pattern-bg-mobile.png')] bg-no-repeat bg-center bg-cover lg:bg-[url('../images/pattern-bg-desktop.png')]"
       >
         <h1 class="text-white font-bold text-2xl">IP Address Tracker</h1>
         <div
-          class="rounded-lg flex flex-row w-[80%] h-20 md:justify-center mb-5"
+          class="rounded-lg flex flex-row w-[80%] h-20 lg:justify-center mb-5"
         >
           <input
-            class="cursor-pointer h-full text-sm overflow-hidden text-ellipsis px-3 py-2 bg-white border shadow-sm border-grayP placeholder-grayP focus:outline-none focus:border-grayP focus:ring-grayP block w-full rounded-l-md sm:text-sm focus:ring-1 text-darkP md:w-96"
+            class="cursor-pointer h-full text-sm overflow-hidden text-ellipsis px-3 py-2 bg-white border shadow-sm border-grayP placeholder-grayP focus:outline-none focus:border-grayP focus:ring-grayP block w-full rounded-l-md sm:text-sm focus:ring-1 text-darkP lg:w-96"
             type="text"
             name=""
             id="ip"
@@ -52,73 +52,73 @@ Para más información, consulta el archivo LICENSE en la raíz del repositorio.
         </div>
         <!-- information -->
         <div
-          class="w-[80%] h-auto bg-white rounded-lg flex flex-col items-center py-3 md:flex-row md:py-6"
+          class="max-w-[80%] w-auto h-auto bg-white rounded-lg flex flex-col items-center justify-center py-3 lg:flex-row lg:py-6"
         >
           <div
-            class="p-2 text-center flex flex-col w-full h-auto md:text-left md:ml-5 md:border-r-2 md:border-grayP"
+            class="p-2 text-center flex flex-col  h-auto lg:text-left lg:ml-5 lg:pr-5 lg:border-r-2 lg:border-grayP"
           >
             <p
-              class="text-grayP uppercase text-[7px] font-bold tracking-widest md:text-xs"
+              class="text-grayP uppercase text-[7px] font-bold tracking-widest lg:text-xs"
             >
               IP Address
             </p>
             <p
               id="labelIp"
-              class="text-darkP text-sm font-medium md:text-lg md:mt-2"
+              class="text-darkP text-sm font-medium lg:text-lg lg:mt-2"
             >
-              192.212.174.101
+            Loading...
             </p>
           </div>
           <div
-            class="p-2 text-center flex flex-col w-full h-auto md:text-left md:ml-5 md:border-r-2 md:border-grayP"
+            class="p-2 text-center flex flex-col h-auto lg:text-left lg:ml-5 lg:pr-5 lg:border-r-2 lg:border-grayP"
           >
             <p
-              class="text-grayP uppercase text-[7px] font-bold tracking-widest md:text-xs"
+              class="text-grayP uppercase text-[7px] font-bold tracking-widest lg:text-xs"
             >
               Location
             </p>
             <p
               id="labelLocation"
-              class="text-darkP text-sm font-medium md:text-lg md:mt-2"
+              class="text-darkP text-sm font-medium lg:text-lg lg:mt-2"
             >
-              Brooklyn, NY 10001
+            Loading...
             </p>
           </div>
           <div
-            class="p-2 text-center flex flex-col w-full h-auto md:text-left md:ml-5 md:border-r-2 md:border-grayP"
+            class="p-2 text-center flex flex-col  h-auto lg:text-left lg:ml-5 lg:pr-5 lg:border-r-2 lg:border-grayP"
           >
             <p
-              class="text-grayP uppercase text-[7px] font-bold tracking-widest md:text-xs"
+              class="text-grayP uppercase text-[7px] font-bold tracking-widest lg:text-xs"
             >
               Timezone
             </p>
             <p
               id="labelTime"
-              class="text-darkP text-sm font-medium md:text-lg md:mt-2"
+              class="text-darkP text-sm font-medium lg:text-lg lg:mt-2"
             >
-              UTC -05:00
+            Loading...
             </p>
           </div>
           <div
-            class="p-2 text-center flex flex-col w-full h-auto md:text-left md:ml-5 md:mr-5"
+            class="p-2 text-center flex flex-col  h-auto lg:text-left lg:ml-5 lg:mr-5"
           >
             <p
-              class="text-grayP uppercase text-[7px] font-bold tracking-widest md:text-xs"
+              class="text-grayP uppercase text-[7px] font-bold tracking-widest lg:text-xs"
             >
               ISP
             </p>
             <p
               id="labelISP"
-              class="text-darkP text-sm font-medium md:text-lg md:mt-2"
+              class="text-darkP text-sm font-medium lg:text-lg lg:mt-2"
             >
-              SpaceX Starlink
+              Loading...
             </p>
           </div>
         </div>
       </div>
 
       <!-- mapa -->
-      <div id="map" class="z-[-1] w-full h-96 relative md:h-[26rem]"></div>
+      <div id="map" class="z-[-1] w-full h-96 relative lg:h-[26rem]"></div>
       <div
         class="absolute z-10 left-0 right-0 mx-auto w-10 h-12 bg-[url('../images/icon-location.svg')] bg-no-repeat bg-center bg-cover bottom-32"
       ></div>

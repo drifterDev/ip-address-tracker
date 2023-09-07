@@ -11,6 +11,19 @@ Para más información, consulta el archivo LICENSE en la raíz del repositorio.
 @tailwind utilities;
 
 @layer base {
+  ::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #5978E0;
+  }
+
+  * {
+    scrollbar-width: thin; 
+    scrollbar-color: #5978E0 #46409C;
+  }
+
   html {
     font-family: "Rubik", sans-serif;
   }

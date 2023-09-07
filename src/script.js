@@ -6,6 +6,11 @@
 
 /* eslint-disable no-undef */
 
+// CAMBIAR AL REGISTRARSE EN LA API #2
+//////////////////////////////////////
+const TOKEN = 'AQUI_VA_EL_TOKEN';
+//////////////////////////////////////
+
 const labelIp = document.getElementById('labelIp');
 const labelLocation = document.getElementById('labelLocation');
 const labelTime = document.getElementById('labelTime');
@@ -13,33 +18,33 @@ const labelISP = document.getElementById('labelISP');
 const btn = document.getElementById('btn');
 let map;
 
-function esDireccionIPValida(valor) {
+function isValidIPAddress(value) {
   const ipRegex = /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-  return ipRegex.test(valor);
+  return ipRegex.test(value);
 }
 
-async function obtenerIP() {
+async function getIP() {
   try {
     const response = await fetch('https://api.ipify.org?format=json');
     if (!response.ok) {
-      throw new Error(`Error en la petición. Código de estado: ${response.status}`);
+      throw new Error(`Error: ${response.status}`);
     }
     const data = await response.json();
     const ip = await data.ip;
     return ip;
   } catch (error) {
-    console.log('Error al obtener la dirección IP: ', error.message);
+    console.log('Error get IP: ', error.message);
     throw error;
   }
 }
 
-async function obtenerLatitudLongitudDesdeIP(ip) {
+async function getLatitudeLongitudeFromIP(ip) {
   try {
     const url = 'https://ipinfo.io/' + ip + '/json?token=' + TOKEN;
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(
-        'Error en la petición. Código de estado: ' + response.status
+        'Error: ' + response.status
       );
     }
     let data = await response.json();
@@ -57,16 +62,16 @@ async function obtenerLatitudLongitudDesdeIP(ip) {
     
     return { lat, lon };
   } catch (error) {
-    console.error('Error al obtener la latitud y longitud:', error.message);
+    console.error('Error get latitude longitude from IP:', error.message);
     throw error;
   }
 }
 
-function dibujarMapa(ip_address) {
-  obtenerLatitudLongitudDesdeIP(ip_address)
-    .then((coordenadas) => {
+function drawMap(ip_address) {
+  getLatitudeLongitudeFromIP(ip_address)
+    .then((coordinates) => {
       map = L.map('map').setView(
-        [coordenadas.latitud, coordenadas.longitud],
+        [coordinates.lat, coordinates.lon],
         14
       );
 
@@ -76,33 +81,33 @@ function dibujarMapa(ip_address) {
       }).addTo(map);
     })
     .catch((error) => {
-      console.error('Error general:', error);
+      console.error('Error  :', error);
     });
 }
 
-function redibujarMapa(ip_address) {
-  obtenerLatitudLongitudDesdeIP(ip_address)
+function redrawMap(ip_address) {
+  getLatitudeLongitudeFromIP(ip_address)
     .then((coordenadas) => {
-      map.flyTo([coordenadas.latitud, coordenadas.longitud], 14);
+      map.flyTo([coordenadas.lat, coordenadas.lon], 14);
     })
     .catch((error) => {
-      console.error('Error general:', error);
+      console.error('Error redraw Map:', error);
     });
 }
 
-obtenerIP()
+getIP()
   .then((ip) => {
-    dibujarMapa(ip);
+    drawMap(ip);
   })
   .catch((error) => {
-    console.error('Error general:', error);
+    console.error('Error get IP:', error);
   });
 
 btn.addEventListener('click', () => {
   let ip_address = document.getElementById('ip').value;
-  if (esDireccionIPValida(ip_address)) {
-    redibujarMapa(ip_address);
+  if (isValidIPAddress(ip_address)) {
+    redrawMap(ip_address);
   } else {
-    alert('Ingresa una dirección IP válida');
+    alert('Please enter a valid IP address');
   }
 });
