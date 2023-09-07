@@ -10,9 +10,9 @@ El proyecto está hecho con TailwindCSS para la maquetación y JavaScript para l
 
 ## API's utilizadas
 
-- Conseguir la dirección IP publica más cercana: [API #1 (ipify API)](https://api.ipify.org/?format=json)
-- Conseguir información útil sobre la IP: [API #2 (ipinfo.io)](https://ipinfo.io/)
-- Dibujar el mapa: [API #3 (OpenStreetMap)](https://www.openstreetmap.org/)
+- Para conseguir la dirección IP publica más cercana: [API #1 (ipify API)](https://api.ipify.org/?format=json)
+- Para conseguir información útil sobre las diferentes direcciones IP: [API #2 (ipinfo.io)](https://ipinfo.io/)
+- Para dibujar el mapa: [API #3 (OpenStreetMap)](https://www.openstreetmap.org/)
 
 ## Requisitos previos
 
