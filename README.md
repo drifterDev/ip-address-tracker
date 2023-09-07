@@ -1,29 +1,53 @@
-## The challenge
+# Página de Turismo Espacial
 
-Your challenge is to build out this IP Address Tracker app and get it looking as close to the design as possible. To get the IP Address locations, you'll be using the [IP Geolocation API by IPify](https://geo.ipify.org/). To generate the map, we recommend using [LeafletJS](https://leafletjs.com/).
+Este proyecto recrea una página web de turismo espacial, en la cual se presenta los destinos disponibles, la tripulación que acompañara a los turistas y la tecnología utilizada para el viaje.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+El proyecto está hecho con TailwindCSS para la maquetación y JavaScript para la interactividad.
 
-Your users should be able to:
+<img src="./src/assets/preview.jpg">
 
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See their own IP address on the map on the initial page load
-- Search for any IP addresses or domains and see the key information and location
+## Requisitos previos
 
----
+Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo tienes instalado, puedes descargarlo e instalarlo desde [el sitio web oficial de Node.js](https://nodejs.org/).
 
-⚠️ **IMPORTANT** ⚠️: To use the IP Geolocation API by IPify, you'll need to sign up for a free account. You won't need to add any cards details to do this and it's a very quick process. This will generate an API Key for you. Usually, you would be able to restrict your API Key to a specific URL (your own domain). This makes sure that other people can't use your API Key on their own websites. IPify doesn't have this feature, but because you aren't adding your card details, this isn't an issue. **So be sure to only sign up for the free account and DO NOT enter any card details**.
+## Instalación
 
-For the mapping API, we recommend using [LeafletJS](https://leafletjs.com/). It's free to use and doesn't require an API Key. If you decide to use another API, like Google Maps or Mapbox, be sure to secure your API Key. Here are guides for both Google Maps and Mapbox, be sure to read through them thoroughly:
+1. Clona este repositorio en tu máquina local o descargar la carpeta comprimida del proyecto:
 
-- [API Key best practices from Google Developers](https://developers.google.com/maps/api-key-best-practices)
-- [How to use Mapbox securely](https://docs.mapbox.com/help/troubleshooting/how-to-use-mapbox-securely/)
+   ```bash
+   git clone https://github.com/drifterDev/turismo-espacial.git
+2. Descargar las dependencias nesesarias del proyecto:
 
-Exposing your API Key publicly can lead to other people using it to make requests for their own application if the proper precautions aren't in place. Please be sure you read the guides thoroughly and follow their recommendations.
+   ```bash
+   npm install
+3. Correr el comando para generar el CSS debido al framework TailwindCSS:
 
-**We don't take any responsibility if you expose your API Key while completing the challenge and have not secured it.**
+   ```bash
+   npm run build
+4. El archivo principal o punto de entrada es home.html, pero se puede acceder mediante los demas archivos .html.
 
----
+5. Abrir un servidor local o utilizar la extensión Live Server. Debido a que dentro del proyecto se utiliza async-await en archivos locales y esto es bloqueado por los navegadores.
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+6. (Si se utiliza Live Server, esto no es nesesario) Instalar http-server
+
+   ```bash
+   npm install -g http-server
+7. Ir a la carpeta src/ y dentro de esta ejecutar lo siguiente
+   ```bash
+   http-server -p 8080 -o /home.html
+8. Al hacer esto se debería abrir automaticamente en el navegador el servidor con la pagina web ya cargada y si no, entonces fijarse en la siguiente salida.
+
+   ```bash
+   Starting up http-server, serving ./
+   Available on:
+    http://127.0.0.1:8080
+    http://192.168.1.100:8080
+9. Abrir el navegador de preferencia e ir a cualquiera de las direcciones que fueron proporcionadas.
+
+## Contribuciones
+
+Aprecio cualquier sugerencia para mejorar el contenido de este proyecto. Si deseas contribuir, por favor crea un "issue" en el repositorio o contáctame directamente. Valoraré tus aportes para mejorar este repositorio.
+
+## Licencia
+
+Los códigos incluidos en este proyecto están bajo la Licencia MIT. Para obtener más información, consulta el archivo "LICENSE" en la raíz del repositorio.
