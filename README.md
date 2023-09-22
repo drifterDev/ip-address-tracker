@@ -8,7 +8,7 @@ El proyecto está hecho con TailwindCSS para la maquetación y JavaScript para l
 
 _Visualizar ubicación de IP pública más cercana:_ Al ingresar a la página por primera vez, se mostrará la ubicación de la IP pública más cercana.
 
-_Visualizar ubicación de IP ingresada:_ Al ingresar una IP válida en el campo de búsqueda, se mostrará la ubicación de la IP ingresada si es de dominio público.
+_Visualizar ubicación de IP ingresada:_ Al ingresar una IP válida en el campo de búsqueda, se mostrará la ubicación de la IP ingresada si es de dominio público, la precisión de la ubicación dependerá de la API #2.
 
 _Visualizar información de IP ingresada:_ Al ingresar una IP válida en el campo de búsqueda, se mostrará la información relevante de la IP ingresada si es de dominio público.
 
