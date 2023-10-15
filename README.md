@@ -2,33 +2,25 @@
 
 La idea de este proyecto fue brindada por [Frontend Mentor](https://www.frontendmentor.io), es una página web que nos muestra la ubicación de diferentes IP que sean de dominio público, este proyecto no interactúa con direcciones IP privadas o protegidas.
 
-El proyecto está hecho con TailwindCSS para la maquetación y JavaScript para la interactividad con las API's.
+## Vista previa
+
+<img src="./design/desktop-preview.jpg">
 
 ## Funcionalidades
 
 _Visualizar ubicación de IP pública más cercana:_ Al ingresar a la página por primera vez, se mostrará la ubicación de la IP pública más cercana.
 
-_Visualizar ubicación de IP ingresada:_ Al ingresar una IP válida en el campo de búsqueda, se mostrará la ubicación de la IP ingresada si es de dominio público, la precisión de la ubicación dependerá de la API #2.
+_Visualizar ubicación de IP ingresada:_ Al ingresar una IP válida en el campo de búsqueda, se mostrará la ubicación de la IP ingresada, si es de dominio público, la precisión de la ubicación dependerá de la API #2.
 
 _Visualizar información de IP ingresada:_ Al ingresar una IP válida en el campo de búsqueda, se mostrará la información relevante de la IP ingresada si es de dominio público.
 
-## Vista previa
-
-<img src="./design/desktop-preview.jpg">
-
 ## API's utilizadas
 
-- Para conseguir la dirección IP publica más cercana: [API #1 (ipify API)](https://api.ipify.org/?format=json)
-- Para conseguir información útil sobre las diferentes direcciones IP: [API #2 (ipinfo.io)](https://ipinfo.io/)
-- Para dibujar el mapa: [API #3 (OpenStreetMap)](https://www.openstreetmap.org/)
+- [API #1 (ipify API)](https://api.ipify.org/?format=json) para conseguir la dirección IP publica más cercana.
+- [API #2 (ipinfo.io)](https://ipinfo.io/) para conseguir información útil sobre las diferentes direcciones IP.
+- [API #3 (OpenStreetMap)](https://www.openstreetmap.org/) para dibujar el mapa.
 
-## Requisitos previos
-
-Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo tienes instalado, puedes descargarlo e instalarlo desde [el sitio web oficial de Node.js](https://nodejs.org/).
-
-También es necesario registrarse y obtener un Token de acceso en la API #2. Al conseguir el Token de acceso para usar la API se debe pegar en el archivo src/script.js
-
-## Instalación
+## Comenzando 
 
 1. Clona este repositorio en tu máquina local o descargar la carpeta comprimida del proyecto:
 
@@ -36,29 +28,42 @@ También es necesario registrarse y obtener un Token de acceso en la API #2. Al 
    git clone https://github.com/drifterDev/ip-address-tracker.git
    ```
 
-2. Descargar las dependencias necesarias del proyecto:
+### Prerrequisitos 
+
+Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo tienes instalado, puedes descargarlo e instalarlo desde [el sitio web oficial de Node.js](https://nodejs.org/).
+
+También es necesario registrarse y obtener un Token de acceso en la API #2. Al conseguir el Token de acceso para usar la API se debe pegar en el archivo src/script.js
+
+### Instalación 
+
+1. Descargar las dependencias necesarias del proyecto:
 
    ```bash
    npm install
    ```
 
-3. Correr el comando para generar el CSS debido al framework TailwindCSS:
+2. Correr el comando para generar el CSS debido al framework TailwindCSS:
 
    ```bash
    npm run build
    ```
 
-4. El archivo principal o punto de entrada está en la carpeta src/ y es el index.html.
+3. El archivo principal o punto de entrada está en la carpeta src/ y es el index.html.
 
-5. Abrir el navegador de preferencia y abrir el archivo index.html.
+4. Abrir el navegador de preferencia y abrir el archivo index.html.
 
-## Contribuciones
+## Construido con 
+
+* [TailwindCSS](https://tailwindcss.com/) - El framework CSS usado
+* [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Lenguaje de programación usado
+
+## Contribuyendo 
 
 Aprecio cualquier sugerencia para mejorar el contenido de este proyecto. Si deseas contribuir, por favor crea un "issue" en el repositorio o contáctame directamente. Valoraré tus aportes para mejorar este repositorio.
 
-## Licencia proyecto
+## Licencia 
 
-Los códigos incluidos en este proyecto están bajo la Licencia MIT. Para obtener más información, consulta el archivo "LICENSE" en la raíz del repositorio.
+Los códigos incluidos en este proyecto están bajo la Licencia MIT. Para obtener más información, consulta el archivo [LICENSE](LICENSE) en la raíz del repositorio.
 
 ## Licencia de API's
 
