@@ -4,7 +4,7 @@ La idea de este proyecto fue brindada por [Frontend Mentor](https://www.frontend
 
 ## Vista previa
 
-<img src="./design/desktop-preview.jpg">
+<img src="./design/preview.png">
 
 ## Funcionalidades
 
